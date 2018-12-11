@@ -1,12 +1,10 @@
 ## pair_sum([1,3,2,2],4)
 def pair_sum(lis,k):
-""" returns a unique pairs that add up to k
-
-  arguments:
+    """ returns a unique pairs that add up to k
+      arguments:
     list: the list to checked
     k:    the number the pairs must sum to 
-
-"""
+    """
     re = []
     for l in lis:
         for j in lis:
@@ -17,5 +15,7 @@ def pair_sum(lis,k):
                 else:
                     re.append(j)
                     re.append(l)
-                    
-    return re
+    st = ""
+    for i in range(0,len(re)-1,2):
+        st += '({}, {})   '.format(re[i],re[i+1])
+    return st
