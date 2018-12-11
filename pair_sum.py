@@ -19,3 +19,27 @@ def pair_sum(lis,k):
     for i in range(0,len(re)-1,2):
         st += '({}, {})   '.format(re[i],re[i+1])
     return st
+
+
+
+##################################################333
+########## another way to do it using sets
+
+def psum(arr,k):
+    
+    if len(arr)<2:
+        return null
+   
+    seen = set()
+    
+    output = set()
+    for num in arr:
+        target  = k-num
+        if target not in seen:
+            seen.add(num)
+        else:
+            
+            output.add((num,target))
+    
+   
+    return  print(output)
