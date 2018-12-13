@@ -10,3 +10,16 @@ def linked_list_cycle_checker(node):
             return True
         
     return False
+
+def reverse(head):
+    current = head
+    prev = None
+    next = None
+    
+    while current:
+        next = current.next
+        current.next = prev
+        
+        prev = current
+        current = next
+    return prev.value
